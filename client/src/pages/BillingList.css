@@ -1,0 +1,606 @@
+.billing-list-wrapper {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #f5f7fa 0%, #e8ecf1 100%);
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+.billing-list-container {
+  flex: 1;
+  padding: 25px;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+.billing-list-content-wrapper {
+  width: 100%;
+  max-width: 1600px;
+  margin: 0 auto;
+}
+
+.billing-list-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.billing-list-title {
+  color: #333;
+  font-weight: 700;
+  font-size: 2rem;
+  margin: 0;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.content-card {
+  background: white;
+  border-radius: 20px;
+  padding: 30px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+  border: 2px solid rgba(102, 126, 234, 0.1);
+}
+
+/* Filters Section */
+.filters-section {
+  margin-bottom: 25px;
+  padding-bottom: 25px;
+  border-bottom: 2px solid #e9ecef;
+}
+
+.filters-title {
+  color: #667eea;
+  font-weight: 700;
+  margin-bottom: 20px;
+  font-size: 1.2rem;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #e9ecef;
+}
+
+.filters-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr auto;
+  gap: 20px;
+  align-items: start;
+}
+
+.filter-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.filter-group .form-control {
+  height: 48px;
+}
+
+.search-group {
+  grid-column: 1;
+}
+
+.date-group {
+  grid-column: auto;
+}
+
+.filter-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  min-width: 130px;
+  justify-content: flex-start;
+  padding-top: 28px;
+}
+
+.form-label {
+  display: block;
+  margin-bottom: 8px;
+  color: #495057;
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.form-control {
+  width: 100%;
+  height: 48px;
+  padding: 12px 15px;
+  border: 2px solid #e0e0e0;
+  border-radius: 10px;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+  background: white;
+  color: #333 !important;
+  box-sizing: border-box;
+}
+
+.form-control::placeholder {
+  color: #999;
+  opacity: 1;
+}
+
+.form-control:focus {
+  outline: none;
+  border-color: #667eea;
+  box-shadow: 0 0 0 4px rgba(102, 126, 234, 0.1);
+  background: white;
+  color: #333;
+}
+
+.date-input {
+  height: 48px;
+  padding: 12px 15px;
+  padding-right: 50px;
+  color: #333 !important;
+  box-sizing: border-box;
+}
+
+.date-input::-webkit-datetime-edit {
+  color: #333 !important;
+  padding: 0;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.date-input::-webkit-datetime-edit-fields-wrapper {
+  color: #333 !important;
+  padding: 0;
+}
+
+.date-input::-webkit-datetime-edit-text {
+  color: #333 !important;
+  padding: 0 2px;
+}
+
+.date-input::-webkit-datetime-edit-month-field,
+.date-input::-webkit-datetime-edit-day-field,
+.date-input::-webkit-datetime-edit-year-field {
+  color: #333 !important;
+  padding: 0 2px;
+}
+
+/* Webkit browsers (Chrome, Safari, Edge) - Calendar Icon with Proper Image */
+.date-input::-webkit-calendar-picker-indicator {
+  cursor: pointer;
+  padding: 0;
+  margin-left: 8px;
+  margin-right: 0;
+  border-radius: 6px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 24 24' fill='none' stroke='%23ffffff' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Crect x='3' y='4' width='18' height='18' rx='2' ry='2'%3E%3C/rect%3E%3Cline x1='16' y1='2' x2='16' y2='6'%3E%3C/line%3E%3Cline x1='8' y1='2' x2='8' y2='6'%3E%3C/line%3E%3Cline x1='3' y1='10' x2='21' y2='10'%3E%3C/line%3E%3C/svg%3E") !important;
+  background-color: #667eea !important;
+  background-repeat: no-repeat !important;
+  background-position: center !important;
+  background-size: 20px 20px !important;
+  color: white !important;
+  opacity: 1 !important;
+  width: 36px !important;
+  height: 36px !important;
+  transition: all 0.2s ease;
+  position: relative;
+}
+
+.date-input::-webkit-calendar-picker-indicator:hover {
+  background-color: #764ba2 !important;
+  transform: scale(1.05);
+  box-shadow: 0 2px 8px rgba(102, 126, 234, 0.4);
+}
+
+.date-input::-webkit-calendar-picker-indicator:active {
+  transform: scale(0.95);
+}
+
+/* Firefox - Calendar Icon with Proper Image */
+.date-input::-moz-calendar-picker-indicator {
+  cursor: pointer;
+  padding: 0;
+  margin-left: 8px;
+  margin-right: 0;
+  border-radius: 6px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 24 24' fill='none' stroke='%23ffffff' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Crect x='3' y='4' width='18' height='18' rx='2' ry='2'%3E%3C/rect%3E%3Cline x1='16' y1='2' x2='16' y2='6'%3E%3C/line%3E%3Cline x1='8' y1='2' x2='8' y2='6'%3E%3C/line%3E%3Cline x1='3' y1='10' x2='21' y2='10'%3E%3C/line%3E%3C/svg%3E") !important;
+  background-color: #667eea !important;
+  background-repeat: no-repeat !important;
+  background-position: center !important;
+  background-size: 20px 20px !important;
+  color: white !important;
+  opacity: 1 !important;
+  width: 36px !important;
+  height: 36px !important;
+  transition: all 0.2s ease;
+}
+
+.date-input::-moz-calendar-picker-indicator:hover {
+  background-color: #764ba2 !important;
+  transform: scale(1.05);
+  box-shadow: 0 2px 8px rgba(102, 126, 234, 0.4);
+}
+
+/* Ensure the calendar icon is visible on focus */
+.date-input:focus::-webkit-calendar-picker-indicator {
+  background-color: #764ba2 !important;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.2);
+}
+
+/* For browsers that don't support custom styling, ensure icon is visible */
+.date-input[type="date"] {
+  color-scheme: light;
+  color: #333 !important;
+}
+
+.form-text {
+  display: block;
+  margin-top: 5px;
+  color: #6c757d;
+  font-size: 0.85rem;
+}
+
+.btn {
+  padding: 12px 25px;
+  border-radius: 10px;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 0.95rem;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
+}
+
+.btn-success {
+  background: linear-gradient(135deg, #28a745 0%, #20c997 100%);
+  color: white;
+  box-shadow: 0 4px 15px rgba(40, 167, 69, 0.3);
+}
+
+.btn-success:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(40, 167, 69, 0.4);
+}
+
+.btn-outline-secondary {
+  border: 2px solid #dc3545;
+  color: white;
+  background: linear-gradient(135deg, #dc3545 0%, #c82333 100%);
+  box-shadow: 0 2px 8px rgba(220, 53, 69, 0.3);
+}
+
+.btn-outline-secondary:hover {
+  background: linear-gradient(135deg, #c82333 0%, #bd2130 100%);
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(220, 53, 69, 0.4);
+}
+
+.btn-sm {
+  padding: 8px 15px;
+  font-size: 0.85rem;
+}
+
+.w-100 {
+  width: 100%;
+}
+
+.mb-2 {
+  margin-bottom: 10px;
+}
+
+/* Results Summary */
+.results-summary {
+  background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%);
+  border-left: 4px solid #2196f3;
+  border-radius: 10px;
+  padding: 15px 20px;
+  color: #1565c0;
+  font-size: 1rem;
+  margin-bottom: 25px;
+}
+
+.results-summary strong {
+  color: #0d47a1;
+}
+
+/* Table */
+.table-responsive {
+  overflow-x: auto;
+  border-radius: 10px;
+}
+
+.bills-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+}
+
+.bills-table thead {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+}
+
+.bills-table th {
+  padding: 15px 12px;
+  text-align: left;
+  font-weight: 600;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  white-space: nowrap;
+}
+
+.bills-table td {
+  padding: 15px 12px;
+  border-bottom: 1px solid #e9ecef;
+  color: #495057;
+  vertical-align: middle;
+}
+
+.bills-table tbody tr {
+  transition: all 0.2s ease;
+}
+
+.bills-table tbody tr:hover {
+  background-color: #f8f9fa;
+  transform: scale(1.005);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.bill-number {
+  font-weight: 600;
+  color: #667eea;
+}
+
+.bill-date {
+  white-space: nowrap;
+  color: #6c757d;
+  font-size: 0.9rem;
+}
+
+.buyer-name {
+  font-weight: 600;
+  color: #333;
+}
+
+.buyer-contact {
+  color: #6c757d;
+  font-size: 0.9rem;
+}
+
+.items-count {
+  text-align: center;
+}
+
+.items-badge {
+  display: inline-block;
+  padding: 5px 12px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.bill-amount {
+  text-align: right;
+}
+
+.amount-value {
+  display: block;
+  color: #28a745;
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+
+.subtotal-text {
+  display: block;
+  color: #6c757d;
+  font-size: 0.8rem;
+  margin-top: 3px;
+}
+
+.gst-info {
+  font-size: 0.85rem;
+}
+
+.gst-label {
+  color: #6c757d;
+  font-size: 0.8rem;
+  margin-bottom: 3px;
+}
+
+.gst-amount {
+  color: #667eea;
+  font-weight: 600;
+}
+
+.text-muted {
+  color: #6c757d;
+  font-style: italic;
+}
+
+.payment-badge {
+  display: inline-block;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+.payment-cash {
+  background: linear-gradient(135deg, #28a745 0%, #20c997 100%);
+  color: white;
+}
+
+.payment-upi {
+  background: linear-gradient(135deg, #2196f3 0%, #1976d2 100%);
+  color: white;
+}
+
+.payment-card {
+  background: linear-gradient(135deg, #ff9800 0%, #f57c00 100%);
+  color: white;
+}
+
+.payment-net-banking {
+  background: linear-gradient(135deg, #9c27b0 0%, #7b1fa2 100%);
+  color: white;
+}
+
+.payment-cheque {
+  background: linear-gradient(135deg, #607d8b 0%, #455a64 100%);
+  color: white;
+}
+
+.action-buttons {
+  display: flex;
+  gap: 8px;
+}
+
+.btn-icon {
+  padding: 8px 12px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1.1rem;
+  transition: all 0.2s ease;
+  background: transparent;
+}
+
+.btn-view:hover {
+  background: #667eea;
+  transform: scale(1.1);
+}
+
+.btn-delete:hover {
+  background: #dc3545;
+  transform: scale(1.1);
+}
+
+.loading-message,
+.empty-message {
+  text-align: center;
+  padding: 60px 20px;
+  color: #6c757d;
+}
+
+.empty-message h5 {
+  color: #495057;
+  margin-bottom: 10px;
+  font-size: 1.5rem;
+}
+
+.empty-message p {
+  margin-bottom: 20px;
+  color: #6c757d;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .filters-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+  }
+
+  .search-group {
+    grid-column: 1 / -1;
+  }
+
+  .date-group {
+    grid-column: auto;
+  }
+
+  .filter-actions {
+    grid-column: 1 / -1;
+    flex-direction: row;
+    padding-top: 0;
+    min-width: auto;
+  }
+
+  .filter-actions .btn {
+    flex: 1;
+  }
+}
+
+@media (max-width: 768px) {
+  .billing-list-container {
+    padding: 15px;
+  }
+
+  .billing-list-title {
+    font-size: 1.5rem;
+  }
+
+  .content-card {
+    padding: 20px;
+  }
+
+  .filters-grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .search-group,
+  .date-group {
+    grid-column: 1;
+  }
+
+  .filter-actions {
+    padding-top: 0;
+  }
+
+  .bills-table {
+    font-size: 0.85rem;
+  }
+
+  .bills-table th,
+  .bills-table td {
+    padding: 10px 8px;
+  }
+
+  .bills-table th {
+    font-size: 0.75rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .billing-list-container {
+    padding: 10px;
+  }
+
+  .billing-list-header {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .bills-table {
+    font-size: 0.75rem;
+  }
+
+  .bills-table th,
+  .bills-table td {
+    padding: 8px 5px;
+  }
+
+  .amount-value {
+    font-size: 1rem;
+  }
+
+  .items-badge,
+  .payment-badge {
+    font-size: 0.75rem;
+    padding: 4px 8px;
+  }
+}

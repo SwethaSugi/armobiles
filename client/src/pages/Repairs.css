@@ -1,0 +1,397 @@
+.repairs-wrapper {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #f5f7fa 0%, #e8ecf1 100%);
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+.repairs-container {
+  flex: 1;
+  padding: 25px;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+.repairs-content-wrapper {
+  width: 100%;
+  max-width: 1600px;
+  margin: 0 auto;
+}
+
+.repairs-title {
+  color: #333;
+  font-weight: 700;
+  margin-bottom: 30px;
+  font-size: 2rem;
+  text-align: center;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.repairs-layout {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 25px;
+  align-items: start;
+}
+
+/* Form Card */
+.repair-form-card {
+  background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+  border-radius: 20px;
+  padding: 30px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+  position: sticky;
+  top: 90px;
+  border: 2px solid rgba(102, 126, 234, 0.1);
+}
+
+.form-card-title {
+  color: #667eea;
+  font-weight: 700;
+  margin-bottom: 25px;
+  font-size: 1.5rem;
+  padding-bottom: 15px;
+  border-bottom: 3px solid #667eea;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-label {
+  display: block;
+  margin-bottom: 8px;
+  color: #495057;
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.form-control,
+.form-select {
+  width: 100%;
+  padding: 12px 15px;
+  border: 2px solid #e0e0e0;
+  border-radius: 10px;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+  background: white;
+  font-family: inherit;
+}
+
+.form-control:focus,
+.form-select:focus {
+  outline: none;
+  border-color: #667eea;
+  box-shadow: 0 0 0 4px rgba(102, 126, 234, 0.1);
+}
+
+.form-text {
+  display: block;
+  margin-top: 5px;
+  color: #6c757d;
+  font-size: 0.85rem;
+}
+
+.form-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 25px;
+}
+
+.btn {
+  padding: 12px 25px;
+  border-radius: 10px;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 0.95rem;
+  flex: 1;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
+}
+
+.btn-secondary {
+  background: #6c757d;
+  color: white;
+}
+
+.btn-secondary:hover {
+  background: #5a6268;
+  transform: translateY(-2px);
+}
+
+/* List Card */
+.repair-list-card {
+  background: white;
+  border-radius: 20px;
+  padding: 30px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+  border: 2px solid rgba(102, 126, 234, 0.1);
+}
+
+.list-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.list-title {
+  color: #333;
+  font-weight: 700;
+  font-size: 1.5rem;
+  margin: 0;
+}
+
+.list-controls {
+  display: flex;
+  gap: 15px;
+  flex: 1;
+  min-width: 300px;
+}
+
+.status-filter,
+.sort-filter,
+.search-input {
+  flex: 1;
+  min-width: 150px;
+}
+
+.loading-message,
+.empty-message {
+  text-align: center;
+  padding: 60px 20px;
+  color: #6c757d;
+  font-size: 1.1rem;
+}
+
+/* Table */
+.table-responsive {
+  overflow-x: auto;
+  border-radius: 10px;
+}
+
+.repairs-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  font-size: 0.9rem;
+}
+
+.repairs-table thead {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+}
+
+.repairs-table th {
+  padding: 12px 10px;
+  text-align: left;
+  font-weight: 600;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  white-space: nowrap;
+}
+
+.repairs-table td {
+  padding: 12px 10px;
+  border-bottom: 1px solid #e9ecef;
+  color: #495057;
+}
+
+.repairs-table tbody tr {
+  transition: all 0.2s ease;
+}
+
+.repairs-table tbody tr:hover {
+  background-color: #f8f9fa;
+  transform: scale(1.005);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.customer-name {
+  font-weight: 600;
+  color: #333;
+}
+
+.device-name {
+  font-weight: 500;
+  color: #495057;
+}
+
+.issue-cell {
+  max-width: 200px;
+  color: #6c757d;
+}
+
+.cost-cell {
+  font-weight: 600;
+  color: #28a745;
+}
+
+.notes-cell {
+  max-width: 150px;
+  color: #6c757d;
+  font-size: 0.85rem;
+}
+
+.date-cell {
+  white-space: nowrap;
+  color: #6c757d;
+  font-size: 0.85rem;
+}
+
+.text-muted {
+  color: #6c757d;
+  font-style: italic;
+}
+
+/* Status Badges */
+.status-badge {
+  display: inline-block;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.status-pending {
+  background: linear-gradient(135deg, #ffc107 0%, #ff9800 100%);
+  color: white;
+  box-shadow: 0 2px 8px rgba(255, 193, 7, 0.3);
+}
+
+.status-progress {
+  background: linear-gradient(135deg, #2196f3 0%, #1976d2 100%);
+  color: white;
+  box-shadow: 0 2px 8px rgba(33, 150, 243, 0.3);
+}
+
+.status-completed {
+  background: linear-gradient(135deg, #4caf50 0%, #388e3c 100%);
+  color: white;
+  box-shadow: 0 2px 8px rgba(76, 175, 80, 0.3);
+}
+
+.status-default {
+  background: #6c757d;
+  color: white;
+}
+
+.action-buttons {
+  display: flex;
+  gap: 8px;
+}
+
+.btn-icon {
+  padding: 8px 12px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1.1rem;
+  transition: all 0.2s ease;
+  background: transparent;
+}
+
+.btn-edit:hover {
+  background: #667eea;
+  transform: scale(1.1);
+}
+
+.btn-delete:hover {
+  background: #dc3545;
+  transform: scale(1.1);
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .repairs-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .repair-form-card {
+    position: static;
+  }
+}
+
+@media (max-width: 768px) {
+  .repairs-container {
+    padding: 15px;
+  }
+
+  .repairs-title {
+    font-size: 1.5rem;
+  }
+
+  .repair-form-card,
+  .repair-list-card {
+    padding: 20px;
+  }
+
+  .list-header {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .list-controls {
+    flex-direction: column;
+    min-width: 100%;
+  }
+
+  .repairs-table {
+    font-size: 0.8rem;
+  }
+
+  .repairs-table th,
+  .repairs-table td {
+    padding: 8px 6px;
+  }
+
+  .repairs-table th {
+    font-size: 0.75rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .repairs-container {
+    padding: 10px;
+  }
+
+  .repairs-table {
+    font-size: 0.75rem;
+  }
+
+  .repairs-table th,
+  .repairs-table td {
+    padding: 6px 4px;
+  }
+
+  .status-badge {
+    font-size: 0.7rem;
+    padding: 4px 8px;
+  }
+
+  .issue-cell,
+  .notes-cell {
+    max-width: 100px;
+  }
+}

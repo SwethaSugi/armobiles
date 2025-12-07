@@ -1,0 +1,326 @@
+.shop-settings-wrapper {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #f5f7fa 0%, #e8ecf1 100%);
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+.shop-settings-container {
+  flex: 1;
+  padding: 25px;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+.shop-settings-content-wrapper {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.content-card {
+  background: white;
+  border-radius: 20px;
+  padding: 30px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+  border: 2px solid rgba(102, 126, 234, 0.1);
+  margin-bottom: 25px;
+}
+
+.settings-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.settings-title {
+  color: #333;
+  font-weight: 700;
+  font-size: 2rem;
+  margin: 0;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.info-alert {
+  background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%);
+  border-left: 4px solid #2196f3;
+  border-radius: 10px;
+  padding: 15px 20px;
+  color: #1565c0;
+  font-size: 0.95rem;
+  margin-bottom: 30px;
+}
+
+.info-alert strong {
+  color: #0d47a1;
+}
+
+/* Settings Sections */
+.settings-section {
+  margin-bottom: 40px;
+  padding-bottom: 30px;
+  border-bottom: 2px solid #e9ecef;
+}
+
+.settings-section:last-of-type {
+  border-bottom: none;
+}
+
+.section-title {
+  color: #667eea;
+  font-weight: 700;
+  margin-bottom: 15px;
+  font-size: 1.4rem;
+  padding-bottom: 12px;
+  border-bottom: 3px solid #667eea;
+}
+
+.section-description {
+  color: #6c757d;
+  font-size: 0.95rem;
+  margin-bottom: 20px;
+}
+
+/* Form Styles */
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.form-group.full-width {
+  grid-column: 1 / -1;
+}
+
+.form-label {
+  display: block;
+  margin-bottom: 8px;
+  color: #495057;
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.form-control {
+  width: 100%;
+  padding: 12px 15px;
+  border: 2px solid #e0e0e0;
+  border-radius: 10px;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+  background: white;
+  font-family: inherit;
+}
+
+.form-control:focus {
+  outline: none;
+  border-color: #667eea;
+  box-shadow: 0 0 0 4px rgba(102, 126, 234, 0.1);
+}
+
+.form-text {
+  display: block;
+  margin-top: 5px;
+  color: #6c757d;
+  font-size: 0.85rem;
+}
+
+/* GST Info Card */
+.gst-info-card {
+  background: linear-gradient(135deg, #fff3cd 0%, #ffe69c 100%);
+  border-left: 4px solid #ffc107;
+  border-radius: 10px;
+  padding: 20px;
+  margin-top: 20px;
+  color: #856404;
+}
+
+.gst-info-card strong {
+  color: #856404;
+  display: block;
+  margin-bottom: 12px;
+  font-size: 1rem;
+}
+
+.gst-rates-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.gst-rates-list li {
+  padding: 8px 0;
+  padding-left: 25px;
+  position: relative;
+  color: #856404;
+  font-size: 0.9rem;
+}
+
+.gst-rates-list li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: #ffc107;
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+/* Form Actions */
+.form-actions {
+  display: flex;
+  gap: 15px;
+  margin-top: 30px;
+  padding-top: 25px;
+  border-top: 2px solid #e9ecef;
+}
+
+.btn {
+  padding: 12px 25px;
+  border-radius: 10px;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 0.95rem;
+}
+
+.btn-success {
+  background: linear-gradient(135deg, #28a745 0%, #20c997 100%);
+  color: white;
+  box-shadow: 0 4px 15px rgba(40, 167, 69, 0.3);
+}
+
+.btn-success:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(40, 167, 69, 0.4);
+}
+
+.btn-success:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.btn-secondary {
+  background: #6c757d;
+  color: white;
+}
+
+.btn-secondary:hover {
+  background: #5a6268;
+  transform: translateY(-2px);
+}
+
+.btn-lg {
+  padding: 15px 30px;
+  font-size: 1.1rem;
+}
+
+/* Preview Card */
+.preview-card {
+  background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+}
+
+.preview-title {
+  color: #667eea;
+  font-weight: 700;
+  margin-bottom: 20px;
+  font-size: 1.3rem;
+}
+
+.preview-box {
+  background: #f8f9fa;
+  border: 2px solid #dee2e6;
+  border-radius: 10px;
+  padding: 25px;
+  border-left: 4px solid #667eea;
+}
+
+.preview-shop-name {
+  color: #333;
+  font-weight: 700;
+  font-size: 1.3rem;
+  margin-bottom: 15px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #dee2e6;
+}
+
+.preview-address {
+  color: #495057;
+  margin-bottom: 15px;
+  line-height: 1.6;
+  white-space: pre-line;
+}
+
+.preview-details {
+  color: #6c757d;
+  font-size: 0.95rem;
+}
+
+.preview-details div {
+  margin-bottom: 8px;
+}
+
+.preview-details strong {
+  color: #495057;
+  margin-right: 8px;
+}
+
+.loading-message {
+  text-align: center;
+  padding: 60px 20px;
+  color: #6c757d;
+  font-size: 1.1rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .shop-settings-container {
+    padding: 15px;
+  }
+
+  .settings-title {
+    font-size: 1.5rem;
+  }
+
+  .content-card {
+    padding: 20px;
+  }
+
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .settings-header {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .form-actions {
+    flex-direction: column;
+  }
+
+  .form-actions .btn {
+    width: 100%;
+  }
+}
+
+@media (max-width: 576px) {
+  .shop-settings-container {
+    padding: 10px;
+  }
+
+  .content-card {
+    padding: 15px;
+  }
+
+  .section-title {
+    font-size: 1.2rem;
+  }
+}
